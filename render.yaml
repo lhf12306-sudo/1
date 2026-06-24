@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mitosis-slide-ai-server
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: AI_PROVIDER
+        value: mock
+      - key: FRONTEND_ORIGIN
+        sync: false
+
